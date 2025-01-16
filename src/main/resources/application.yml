@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-security-with-jwt-in-action
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=accounts
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      mode: always
+      platform: postgres
+      schema-locations: classpath:sql/init-schema.sql
+      data-locations: classpath:sql/init-data.sql
+
+spring-security-with-jwt-in-action:
+  jwt-secret: ${JWT_SECRET}  # https://emn178.github.io/online-tools/sha256.html
+  jwt-expiration-milliseconds: 604800000  # 7 days
