@@ -7,7 +7,7 @@
 The application is designed as a microservice with no user interface.
 
 The app provides 3 methods to `register`, `login` and `getProfile`. By default, every new user is registered with the
-`ROLE_USER` role. There is no function to change the role via API. When calling the login registration methods, the
+`ROLE_USER` role. There is no function to change the role via API. When calling login and registration methods, the
 response will return an `accessToken`.
 
 In the current implementation, the data is stored in a separate Postgres schema `accounts` that provides a materialized
