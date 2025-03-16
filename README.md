@@ -47,7 +47,7 @@ spring-security-with-jwt-in-action/
 
 ## How to try this project?
 
-Don't forget to set the JWT_SECRET environment variable before running the application (you know what to do).
+❗Don't forget to set the `JWT_SECRET` environment variable before running the application (you know what to do).
 You can use, for example, [this service](https://emn178.github.io/online-tools/sha256.html)
 
 ```sh
